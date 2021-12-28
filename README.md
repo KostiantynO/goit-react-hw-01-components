@@ -17,6 +17,8 @@ cd !$
 
   npm i -D gh-pages
   npm run deploy
+
+npm install --save-dev prop-types
 ```
 
 ### package.json - `add to package.json two scripts:`
