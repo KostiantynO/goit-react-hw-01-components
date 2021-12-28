@@ -1,4 +1,4 @@
-steps:
+### steps:
 
 ```shell
 cd ..
@@ -12,4 +12,18 @@ cd !$
 
   npm i -D prettier eslint
   npx mrm@2 lint-staged
+
+  npm i -D modern-normalize
+
+  npm i -D gh-pages
+  npm run deploy
+```
+
+### package.json - `add to package.json two scripts:`
+
+```json
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
 ```
