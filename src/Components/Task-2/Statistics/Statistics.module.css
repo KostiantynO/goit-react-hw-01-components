@@ -33,6 +33,13 @@
 
   color: #fff;
   box-shadow: 1px 1px 2px 1px #7e899e;
+
+  transition: var(--time) var(--cubic) transform;
+}
+
+.item:focus-within,
+.item:hover {
+  transform: scale(1.03);
 }
 
 .item:first-of-type {

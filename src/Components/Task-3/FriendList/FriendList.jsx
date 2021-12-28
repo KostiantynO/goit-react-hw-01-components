@@ -6,7 +6,13 @@ const FriendListItem = ({ name, avatar, id, isOnline }) => (
       className={css.status}
       style={{ backgroundColor: !isOnline ? "red" : "green" }}
     ></span>
-    <img className={css.avatar} src={avatar} alt={name} width="48" />
+    <img
+      className={css.avatar}
+      src={avatar}
+      alt={name}
+      width="48"
+      height="48"
+    />
     <p className={css.name}>{name}</p>
   </li>
 );
