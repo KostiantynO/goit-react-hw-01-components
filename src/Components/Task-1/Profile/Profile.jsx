@@ -12,6 +12,8 @@ const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
           }
           alt={username}
           className={css.avatar}
+          width={184}
+          height={184}
         />
         <p className={css.name}>{username}</p>
         <p className={css.tag}>&#64;{tag}</p>
