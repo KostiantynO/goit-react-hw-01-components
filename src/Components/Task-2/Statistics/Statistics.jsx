@@ -1,4 +1,4 @@
-import PropTypes, { string } from "prop-types";
+import PropTypes from "prop-types";
 import css from "./Statistics.module.css";
 
 const randomBgColor = () => `#${Math.random().toString(16).slice(2, 8)}`;
