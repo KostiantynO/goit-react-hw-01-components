@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import css from "./Profile.module.css";
+import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
   return (
@@ -7,8 +7,8 @@ const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
       <div className={css.description}>
         <img
           src={
-            !avatar?.includes("https://")
-              ? "https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+            !avatar?.includes('https://')
+              ? 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png'
               : avatar
           }
           alt={username}
@@ -16,39 +16,39 @@ const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
           width={184}
           height={184}
         />
-        {username && typeof username === "string" && (
+        {username && typeof username === 'string' && (
           <p className={css.name}>{username}</p>
         )}
-        {tag && typeof tag === "string" && (
+        {tag && typeof tag === 'string' && (
           <p className={css.tag}>&#64;{tag}</p>
         )}
-        {location && typeof location === "string" && (
+        {location && typeof location === 'string' && (
           <p className={css.location}>{location}</p>
         )}
       </div>
 
       {stats &&
-        typeof stats === "object" &&
+        typeof stats === 'object' &&
         Object.keys(stats)?.length &&
         !Array.isArray(stats) && (
           <ul className={css.stats}>
             <li key="profile-followers" className={css.stats__item}>
               <span className={css.label}>Followers </span>
-              {typeof stats.followers === "number" && stats.followers > 0 && (
+              {typeof stats.followers === 'number' && stats.followers > 0 && (
                 <span className={css.quantity}>{stats.followers}</span>
               )}
             </li>
 
             <li key="profile-views" className={css.stats__item}>
               <span className={css.label}>Views </span>
-              {typeof stats.views === "number" && stats.views > 0 && (
+              {typeof stats.views === 'number' && stats.views > 0 && (
                 <span className={css.quantity}>{stats.views}</span>
               )}
             </li>
 
             <li key="profile-likes" className={css.stats__item}>
               <span className={css.label}>Likes </span>
-              {typeof stats.likes === "number" && stats.likes > 0 && (
+              {typeof stats.likes === 'number' && stats.likes > 0 && (
                 <span className={css.quantity}>{stats.likes}</span>
               )}
             </li>
@@ -60,10 +60,10 @@ const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
 
 Profile.defaultProps = {
   user: {
-    username: "not-found",
-    tag: "not-found",
-    location: "not-found",
-    avatar: "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+    username: 'not-found',
+    tag: 'not-found',
+    location: 'not-found',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
 
     stats: {
       followers: 0,

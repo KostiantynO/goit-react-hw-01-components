@@ -29,3 +29,11 @@ npm install --save-dev prop-types
     "deploy": "gh-pages -d build"
   },
 ```
+
+<!-- curl -OL https://raw.githubusercontent.com/<username>/<repo-name>/<branch-name>/path/to/file -->
+
+```shell
+curl --man | less +/-O
+curl --man | less +/-L
+curl -O https://raw.githubusercontent.com/goitacademy/react-lint-staged-workshop/master/.prettierrc.json
+```

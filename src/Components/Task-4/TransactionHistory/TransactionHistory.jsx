@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import css from "./TransactionHistory.module.css";
+import PropTypes from 'prop-types';
+import css from './TransactionHistory.module.css';
 
 const TransactionHistoryItem = ({ id, type, amount, currency }) => {
   return (
@@ -7,10 +7,10 @@ const TransactionHistoryItem = ({ id, type, amount, currency }) => {
     type &&
     amount &&
     currency &&
-    typeof id === "string" &&
-    typeof type === "string" &&
-    typeof amount === "string" &&
-    typeof currency === "string" &&
+    typeof id === 'string' &&
+    typeof type === 'string' &&
+    typeof amount === 'string' &&
+    typeof currency === 'string' &&
     id.trim().length > 0 &&
     type.trim().length > 0 &&
     amount.trim().length > 0 &&
@@ -44,10 +44,10 @@ const TransactionHistory = ({ items }) => {
 
 TransactionHistory.defaultProps = {
   items: {
-    id: "no transaction id",
-    type: "-",
-    amount: "-",
-    currency: "-",
+    id: 'no transaction id',
+    type: '-',
+    amount: '-',
+    currency: '-',
   },
 };
 
@@ -58,7 +58,7 @@ TransactionHistory.propTypes = {
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
-    })
+    }),
   ),
 };
 

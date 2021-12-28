@@ -1,14 +1,14 @@
-import PropTypes from "prop-types";
-import css from "./Statistics.module.css";
+import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 const randomBgColor = () => `#${Math.random().toString(16).slice(2, 8)}`;
 
 const StatsItem = ({ id, label, percentage }) => {
   return (
     id &&
-    typeof id === "string" &&
-    typeof label === "string" &&
-    typeof percentage === "number" && (
+    typeof id === 'string' &&
+    typeof label === 'string' &&
+    typeof percentage === 'number' && (
       <li
         key={id}
         style={{ backgroundColor: randomBgColor() }}
@@ -33,7 +33,7 @@ const Statistics = ({ title, stats }) => {
 };
 
 Statistics.defaultProps = {
-  stats: [{ id: "not-found", label: "not-found", percentage: 0 }],
+  stats: [{ id: 'not-found', label: 'not-found', percentage: 0 }],
 };
 
 Statistics.propTypes = {
@@ -44,7 +44,7 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
+    }),
   ),
 };
 
