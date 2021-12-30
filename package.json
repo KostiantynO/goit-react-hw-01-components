@@ -46,7 +46,8 @@
     "lint-staged": "^12.1.4",
     "modern-normalize": "^1.1.0",
     "prettier": "^2.5.1",
-    "prop-types": "^15.8.0"
+    "prop-types": "^15.8.0",
+    "styled-components": "^5.3.3"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",

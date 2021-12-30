@@ -10,7 +10,7 @@ git remote add origin https://github.com/KostiantynO/goit-react-hw-01-components
 git remote -v && git status
 git push -u origin HEAD
 
-npm i -D prettier eslint modern-normalize prop-types gh-pages
+npm i -D prettier eslint modern-normalize prop-types gh-pages styled-components
 npx mrm@2 lint-staged
 
 npm run deploy
