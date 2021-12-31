@@ -10,16 +10,14 @@ export const ProfileStyled = styled.div`
 `;
 
 export const DescriptionStyled = styled.div`
-  padding: 40px 16px;
+  padding: ${props => props.theme.spacing(10, 4)};
   text-align: center;
 `;
 
 const placeholderImg =
   'https://cdn-icons-png.flaticon.com/512/1077/1077012.png';
 
-const setAttr = ({ avatar }) => ({
-  src: !avatar ? placeholderImg : avatar,
-});
+const setAttr = props => ({ src: props.avatar || placeholderImg });
 
 export const Avatar = styled.img.attrs(setAttr)`
   display: block;
@@ -75,7 +73,7 @@ export const StatsItem = styled.li`
   align-items: center;
   gap: 8px;
 
-  padding: 24px 20px;
+  padding: ${props => props.theme.spacing(6, 5)};
 
   background-color: #f3f6f9;
   transition: var(--time) var(--cubic) transform;

@@ -1,3 +1,5 @@
+const SPACING = 4;
+
 export const theme = Object.freeze({
   colors: {
     white: '#ffffff',
@@ -8,5 +10,8 @@ export const theme = Object.freeze({
     primaryText: '#212121',
     secondaryText: '#757575',
   },
-  spacing: value => `${4 * value}px`,
+  spacing: (...args) =>
+    !args
+      ? '0'
+      : args.reduce((acc, arg) => [...acc, `${arg * SPACING}px`], '').join(' '),
 });

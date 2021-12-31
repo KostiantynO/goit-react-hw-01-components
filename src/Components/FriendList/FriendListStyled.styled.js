@@ -32,14 +32,12 @@ export const FriendListItemStyled = styled.li`
   }
 `;
 
-const setBgColor = ({ isOnline, theme }) =>
-  theme.colors[isOnline ? 'green' : 'red'];
-
 export const IsOnlineIndicator = styled.span`
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: ${setBgColor};
+  background-color: ${({ isOnline, theme }) =>
+    theme.colors[isOnline ? 'green' : 'red']};
 `;
 
 export const FriendName = styled.p`

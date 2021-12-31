@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css';
+import { SectionTitle, StatisticsStyled, StatList } from './Statistics.styled';
 import StatsItem from './StatsItem';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className={css.statistics}>
-      {title && <h2 className={css.title}>{title}</h2>}
-      {stats && <ul className={css.statList}>{stats.map(StatsItem)}</ul>}
-    </section>
+    <StatisticsStyled>
+      {title && <SectionTitle>{title}</SectionTitle>}
+      {stats && <StatList>{stats.map(StatsItem)}</StatList>}
+    </StatisticsStyled>
   );
 };
 
