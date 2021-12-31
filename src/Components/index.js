@@ -1,6 +1,4 @@
-import Profile from './Profile';
-import Statistics from './Statistics';
-import FriendList from './FriendList';
-import TransactionHistory from './TransactionHistory';
-
-export { Profile, Statistics, FriendList, TransactionHistory };
+export * from './Profile';
+export * from './Statistics';
+export * from './FriendList';
+export * from './TransactionHistory';

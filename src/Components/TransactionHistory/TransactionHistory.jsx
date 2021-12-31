@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css';
 import TransactionHistoryItem from './TransactionHistoryItem';
 
-const TransactionHistory = ({ items }) => {
+export const TransactionHistory = ({ items }) => {
   return (
     <table className={css.transactionHistory}>
       <thead>
@@ -32,5 +32,3 @@ TransactionHistory.defaultProps = {
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
 };
-
-export default TransactionHistory;
