@@ -12,6 +12,7 @@ export const theme = Object.freeze({
     grey: '#f3f6f9',
     lightGrey: '#768696',
     lightLightGrey: '#e4e9f0',
+    boxShadowLight: '#a5a5a5',
     boxShadow: '#7e899e',
     lightSeaGreen: '#20b2aa',
   },

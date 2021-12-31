@@ -1,16 +1,14 @@
 import styled from 'styled-components';
+import { iconSize } from '../../constants/';
 
 export const FriendListStyled = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 5px;
-
+  gap: ${props => props.theme.spacing(1)};
   width: 320px;
-  padding: 0;
-  margin: 0 auto 2%;
+  margin: ${props => props.theme.spacing(0, 'auto', '2%')};
 
-  list-style: none;
   border-radius: 4px;
 `;
 
@@ -18,12 +16,12 @@ export const FriendListItemStyled = styled.li`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: ${props => props.theme.spacing(3)};
   padding: ${props => props.theme.spacing(2)};
 
   background-color: ${props => props.theme.colors.white};
   border-radius: 4px;
-  box-shadow: 1px 1px 2px 1px #a5a5a5;
+  box-shadow: 1px 1px 2px 1px ${props => props.theme.colors.boxShadowLight};
   transition: var(--time) var(--cubic) transform;
 
   :focus-within,
@@ -33,8 +31,8 @@ export const FriendListItemStyled = styled.li`
 `;
 
 export const IsOnlineIndicator = styled.span`
-  width: 16px;
-  height: 16px;
+  width: ${iconSize.sm}px;
+  height: ${iconSize.sm}px;
   border-radius: 50%;
   background-color: ${({ isOnline, theme }) =>
     theme.colors[isOnline ? 'green' : 'red']};
@@ -47,6 +45,6 @@ export const FriendName = styled.p`
 
 export const AvatarImg = styled.img`
   display: block;
-  width: 48px;
+  width: ${iconSize.lg}px;
   height: auto;
 `;

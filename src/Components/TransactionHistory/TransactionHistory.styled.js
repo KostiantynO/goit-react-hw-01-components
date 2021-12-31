@@ -22,7 +22,7 @@ export const TransactionRow = styled.tr`
   }
 
   :nth-child(even) {
-    background-color: #ecf1f4;
+    background-color: ${props => props.theme.colors.grey};
   }
 
   :nth-child(odd) {
@@ -31,16 +31,16 @@ export const TransactionRow = styled.tr`
 `;
 
 export const TransactionData = styled.td`
-  padding: 10px;
+  padding: ${props => props.theme.spacing(3)};
 
   :first-of-type {
-    padding-left: 12px;
+    padding-left: ${props => props.theme.spacing(3)};
     text-align: left;
     text-transform: capitalize;
   }
 
   :nth-of-type(2) {
     text-align: right;
-    padding-right: 24px;
+    padding-right: ${props => props.theme.spacing(6)};
   }
 `;
