@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const StatisticsStyled = styled.section`
   width: 320px;
-  margin: 0 auto 2%;
-  background-color: #fff;
+  margin: ${props => props.theme.spacing(0, 'auto', '2%')};
+  background-color: ${props => props.theme.colors.white};
   box-shadow: 1px 1px 4px 1px rgba(33, 33, 33, 0.21);
   border-radius: 4px 4px 12px 12px;
 `;
 
 export const SectionTitle = styled.h2`
   text-align: center;
-  padding: 20px;
+  padding: ${props => props.theme.spacing(5)};
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 500;
@@ -30,14 +30,14 @@ export const StatItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: ${props => props.theme.spacing(2)};
 
   width: calc(100% / 5);
-  padding: 10px;
+  padding: ${props => props.theme.spacing(3)};
 
-  color: #fff;
+  color: ${props => props.theme.colors.white};
   background-color: ${randomBgColor};
-  box-shadow: 1px 1px 2px 1px #7e899e;
+  box-shadow: 1px 1px 2px 1px ${props => props.theme.colors.grey};
 
   transition: var(--time) var(--cubic) transform;
 

@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const ProfileStyled = styled.div`
   width: 320px;
-  margin: 1% auto 1%;
+  margin: ${props => props.theme.spacing('1%', 'auto')};
 
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.white};
   border-radius: 12px;
-  box-shadow: 2px 2px 2px 1px #cdd7e4;
+  box-shadow: 2px 2px 2px 1px ${props => props.theme.colors.boxShadow};
 `;
 
 export const DescriptionStyled = styled.div`
-  padding: ${props => props.theme.spacing(10, 4)};
+  padding: ${props => props.theme.spacing(10, 4, 3)};
   text-align: center;
 `;
 
@@ -24,46 +24,36 @@ export const Avatar = styled.img.attrs(setAttr)`
 
   width: 64%;
   height: auto;
-  margin: 0 auto 32px;
+  margin: ${props => props.theme.spacing(0, 'auto', 8)};
 
   border-radius: 50%;
 `;
 
 export const UserName = styled.p`
-  margin-bottom: 12px;
+  margin-bottom: ${props => props.theme.spacing(3)};
   font-size: 1.6rem;
   font-weight: 700;
-  color: #122236;
+  color: ${props => props.theme.colors.black};
 `;
 
 export const TagName = styled.p`
-  margin-bottom: 12px;
+  margin-bottom: ${props => props.theme.spacing(3)};
   font-size: 1.1rem;
-  color: #768696;
+  color: ${props => props.theme.colors.lightGrey};
 `;
 
-export const Location = styled.p`
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  color: #768696;
-`;
+export const Location = styled(TagName)``;
 
 export const ProfileStats = styled.ul`
   display: flex;
   flex-wrap: wrap;
-
-  padding: 0;
-  margin: 0;
-
   font-size: 1.1rem;
-
-  list-style: none;
-  border-top: 1px solid #e4e9f0;
+  border-top: 1px solid ${props => props.theme.colors.lightLightGrey};
 `;
 
 export const ProfileStatsLabel = styled.span`
   font-size: 1.1rem;
-  color: #768696;
+  color: ${props => props.theme.colors.lightGrey};
 `;
 
 export const StatsItem = styled.li`
@@ -71,11 +61,11 @@ export const StatsItem = styled.li`
   width: calc(100% / 3);
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: ${props => props.theme.spacing(2)};
 
   padding: ${props => props.theme.spacing(6, 5)};
 
-  background-color: #f3f6f9;
+  background-color: ${props => props.theme.colors.grey};
   transition: var(--time) var(--cubic) transform;
 
   :first-of-type {
@@ -97,6 +87,6 @@ export const StatsItem = styled.li`
 `;
 
 export const Quantity = styled.span`
-  color: #25384d;
+  color: ${props => props.theme.colors.black};
   font-weight: 700;
 `;
