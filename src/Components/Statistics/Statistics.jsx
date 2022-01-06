@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { PropTypes } from '../../modules/common/components';
 import { SectionTitle, StatisticsStyled } from './Statistics.styled';
 import { StatList } from './StatList';
 

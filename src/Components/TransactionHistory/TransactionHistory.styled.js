@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from '../../modules/common/components';
 
 export const Transactions = styled.table`
   max-width: 320px;

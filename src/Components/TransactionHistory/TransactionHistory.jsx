@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { PropTypes } from '../../modules/common/components';
 import { TableHeading, Transactions } from './TransactionHistory.styled';
 import { TransactionsTableBody } from './TransactionsTableBody';
 

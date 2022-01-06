@@ -1,5 +1,5 @@
+import { PropTypes } from '../../modules/common/components';
 import TransactionItem from './TransactionItem';
-import PropTypes from 'prop-types';
 
 export const TransactionsTableBody = ({ items }) => {
   return <tbody>{items.map(TransactionItem)}</tbody>;

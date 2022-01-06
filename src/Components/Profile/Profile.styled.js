@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from '../../modules/common/components';
 
 export const ProfileStyled = styled.div`
   width: 320px;
