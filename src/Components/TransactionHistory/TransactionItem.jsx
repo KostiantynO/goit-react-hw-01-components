@@ -1,6 +1,11 @@
 import { TransactionData, TransactionRow } from './TransactionHistory.styled';
 
-const TransactionItem = ({ id, type, amount, currency }) => {
+const TransactionItem = ({
+  id = 'no transaction id',
+  type = '-',
+  amount = '-',
+  currency = '-',
+}) => {
   return id ? (
     <TransactionRow key={id}>
       <TransactionData>{type}</TransactionData>

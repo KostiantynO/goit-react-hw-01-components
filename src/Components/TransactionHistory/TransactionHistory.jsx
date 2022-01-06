@@ -1,17 +1,8 @@
 import PropTypes from 'prop-types';
 import { TableHeading, Transactions } from './TransactionHistory.styled';
-import TransactionItem from './TransactionItem';
+import { TransactionsTableBody } from './TransactionsTableBody';
 
-export const TransactionHistory = ({
-  items = [
-    {
-      id: 'no transaction id',
-      type: '-',
-      amount: '-',
-      currency: '-',
-    },
-  ],
-}) => {
+export const TransactionHistory = ({ items = [{}] }) => {
   return (
     <Transactions>
       <thead>
@@ -22,11 +13,11 @@ export const TransactionHistory = ({
         </tr>
       </thead>
 
-      {items ? <tbody>{items.map(TransactionItem)}</tbody> : ''}
+      {items ? <TransactionsTableBody items={items} /> : ''}
     </Transactions>
   );
 };
 
 TransactionHistory.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
+  items: PropTypes.arrayOf(PropTypes.object),
 };
