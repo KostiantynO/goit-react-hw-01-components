@@ -13,12 +13,15 @@ git push -u origin HEAD
 npm i -D prettier eslint prop-types gh-pages styled-components
 npx mrm@2 lint-staged
 
-npm run deploy
+curl --man | less +/-O
+curl -O https://raw.githubusercontent.com/goitacademy/react-lint-staged-workshop/master/.prettierrc.json
 ```
 
-### package.json - `add to package.json two scripts:`
+### `package.json` - add to `package.json` two `scripts` and `homepage`:
 
 ```json
+  "homepage": "https://KostiantynO.github.io/goit-react-hw-01-components",
+
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -26,6 +29,7 @@ npm run deploy
 ```
 
 ```shell
-curl --man | less +/-L
-curl -O https://raw.githubusercontent.com/goitacademy/react-lint-staged-workshop/master/.prettierrc.json
+git add . && git commit -m "Updates"
+git push
+npm run deploy
 ```
