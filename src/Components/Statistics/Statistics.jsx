@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
-import { SectionTitle, StatisticsStyled, StatList } from './Statistics.styled';
-import StatsItem from './StatsItem';
+import { SectionTitle, StatisticsStyled } from './Statistics.styled';
+import { StatList } from './StatList';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({
+  title,
+  stats = [{ id: 'not-found', label: 'not-found', percentage: 0 }],
+}) => {
   return (
     <StatisticsStyled>
-      {title && <SectionTitle>{title}</SectionTitle>}
-      {stats && <StatList>{stats.map(StatsItem)}</StatList>}
+      {title ? <SectionTitle>{title}</SectionTitle> : ''}
+      {<StatList stats={stats} />}
     </StatisticsStyled>
   );
-};
-
-Statistics.defaultProps = {
-  stats: [{ id: 'not-found', label: 'not-found', percentage: 0 }],
 };
 
 Statistics.propTypes = {

@@ -2,7 +2,16 @@ import PropTypes from 'prop-types';
 import { TableHeading, Transactions } from './TransactionHistory.styled';
 import TransactionItem from './TransactionItem';
 
-export const TransactionHistory = ({ items }) => {
+export const TransactionHistory = ({
+  items = [
+    {
+      id: 'no transaction id',
+      type: '-',
+      amount: '-',
+      currency: '-',
+    },
+  ],
+}) => {
   return (
     <Transactions>
       <thead>
@@ -13,20 +22,9 @@ export const TransactionHistory = ({ items }) => {
         </tr>
       </thead>
 
-      {items && <tbody>{items.map(TransactionItem)}</tbody>}
+      {items ? <tbody>{items.map(TransactionItem)}</tbody> : ''}
     </Transactions>
   );
-};
-
-TransactionHistory.defaultProps = {
-  items: [
-    {
-      id: 'no transaction id',
-      type: '-',
-      amount: '-',
-      currency: '-',
-    },
-  ],
 };
 
 TransactionHistory.propTypes = {

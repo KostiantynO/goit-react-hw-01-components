@@ -7,13 +7,13 @@ import {
 } from './Statistics.styled';
 
 const StatsItem = ({ id, label, percentage }) => {
-  return (
-    id && (
-      <StatItem key={id}>
-        <StatItemLabel>{label}</StatItemLabel>
-        <StatItemPercentage>{percentage}&#37;</StatItemPercentage>
-      </StatItem>
-    )
+  return id ? (
+    <StatItem key={id}>
+      <StatItemLabel>{label}</StatItemLabel>
+      <StatItemPercentage>{percentage}&#37;</StatItemPercentage>
+    </StatItem>
+  ) : (
+    ''
   );
 };
 

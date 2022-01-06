@@ -1,4 +1,4 @@
-import { Profile, Statistics, FriendList, TransactionHistory } from '../';
+import { Profile, Statistics, FriendList, TransactionHistory } from '..';
 import { user, data, friends, transactions } from '../../json';
 import { Container } from './App.styled';
 

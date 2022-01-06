@@ -16,7 +16,7 @@ export const SectionTitle = styled.h2`
   font-weight: 500;
 `;
 
-export const StatList = styled.ul`
+export const StatListStyled = styled.ul`
   display: flex;
   padding: 0;
   margin: 0;

@@ -2,10 +2,8 @@ import PropTypes from 'prop-types';
 import { FriendListStyled } from './FriendListStyled.styled';
 import FriendListItem from './FriendListItem';
 
-export const FriendList = ({ friends }) => {
+export const FriendList = ({ friends = [{}] }) => {
   return <FriendListStyled> {friends.map(FriendListItem)} </FriendListStyled>;
 };
-
-FriendList.defaultProps = { friends: [{}] };
 
 FriendList.propTypes = { friends: PropTypes.arrayOf(PropTypes.object) };

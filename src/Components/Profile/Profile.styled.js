@@ -44,7 +44,7 @@ export const TagName = styled.p`
 
 export const Location = styled(TagName)``;
 
-export const ProfileStats = styled.ul`
+export const ProfileStatListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   font-size: 1.1rem;
