@@ -26,6 +26,11 @@ curl -O https://raw.githubusercontent.com/goitacademy/react-lint-staged-workshop
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,css,scss,md}": "prettier --write"
+  }
 ```
 
 ```shell
